@@ -10,3 +10,13 @@ The bindings are not complete, currently supported functions are
  - pinMode
  - digitalWrite
  - digitalRead
+
+## Build
+
+### Shared library
+
+`gprbuild -p -P wiringPi.gpr`
+
+### Example
+
+`cd example && gprbuild -P pin.gpr && ./example`
