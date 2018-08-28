@@ -1,0 +1,12 @@
+with "../wiringPi.gpr";
+
+project Pin is
+
+    for Source_Dirs use("src");
+    for Main use ("example.adb");
+
+    package Linker is
+        for Default_Switches ("Ada") use ("-lwiringPi");
+    end Linker;
+
+end Pin;

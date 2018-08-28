@@ -1,0 +1,9 @@
+project WiringPi is
+
+    for Source_Dirs use ("src");
+    for Library_Name use "WiringPi";
+    for Library_Kind use "dynamic";
+    for Library_Dir use "lib";
+    for Library_Options use ("-lwiringPi");
+
+end WiringPi;
