@@ -41,7 +41,7 @@ package Wiring.Pi is
         Convention => C,
         External_Name => "wiringPiSetupPhys";
 
-    procedure Pin_Mode
+    procedure Pin_Mode (Pin : Pin_type; Mode : Mode_Type)
         with
         Import,
         Convention => C,
