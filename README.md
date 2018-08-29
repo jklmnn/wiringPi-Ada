@@ -19,4 +19,6 @@ The bindings are not complete, currently supported functions are
 
 ### Example
 
-`cd example && gprbuild -P pin.gpr && ./example`
+### GPIO
+
+`cd example && gprbuild -P gpio.gpr && ./gpio`

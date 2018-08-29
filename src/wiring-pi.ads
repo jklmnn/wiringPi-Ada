@@ -1,5 +1,5 @@
 
-package WiringPi is
+package Wiring.Pi is
 
     subtype Pin_Type is Integer;
 
@@ -59,4 +59,4 @@ package WiringPi is
         Convention => C,
         External_Name => "digitalRead";
 
-end WiringPi;
+end Wiring.Pi;
