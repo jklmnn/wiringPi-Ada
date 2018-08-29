@@ -4,12 +4,21 @@ This project provides Ada bindings for the [wiringPi](http://wiringpi.com/) GPIO
 
 The bindings are not complete, currently supported functions are
 
- - wiringPiSetup
- - wiringPiSetupGpio
- - wiringPiSetupPhys
- - pinMode
- - digitalWrite
- - digitalRead
+ - Pi:
+   - wiringPiSetup
+   - wiringPiSetupGpio
+   - wiringPiSetupPhys
+   - pinMode
+   - digitalWrite
+   - digitalRead
+ - Serial
+   - serialOpen
+   - serialClose
+   - serialPutchar
+   - serialPuts
+   - serialDataAvail
+   - serialGetchar
+   - serialFlush
 
 ## Build
 
@@ -22,3 +31,7 @@ The bindings are not complete, currently supported functions are
 ### GPIO
 
 `cd example && gprbuild -P gpio.gpr && ./gpio`
+
+### Serial
+
+`cd example && gprbuild -P serial.gpr && ./serial <device> <baud rate>`
