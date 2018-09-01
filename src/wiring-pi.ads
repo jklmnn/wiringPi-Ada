@@ -1,3 +1,4 @@
+with System;
 
 package Wiring.Pi is
 
@@ -21,6 +22,20 @@ package Wiring.Pi is
     for Value_Type use (
         Low => 0,
         High => 1
+        );
+
+    type Interrupt is (
+        Edge_Setup,
+        Edge_Falling,
+        Edge_Rising,
+        Edge_Both
+        );
+
+    for Interrupt use (
+        Edge_Setup => 0,
+        Edge_Falling => 1,
+        Edge_Rising => 2,
+        Edge_Both => 3
         );
 
     function Setup return Integer
@@ -58,5 +73,12 @@ package Wiring.Pi is
         Import,
         Convention => C,
         External_Name => "digitalRead";
+
+    function Register_Interrupt (Pin : Pin_Type; Edge : Interrupt; Callback : System.Address)
+        return Integer
+        with
+        Import,
+        Convention => C,
+        External_Name => "wiringPiISR";
 
 end Wiring.Pi;
